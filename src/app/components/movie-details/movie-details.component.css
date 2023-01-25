@@ -1,0 +1,38 @@
+.banner {
+    position: relative;
+    /* height: 600px; */
+    overflow: hidden;
+    /* background-color: #f8f9fa; */
+    background-color: #000;
+}
+
+.banner img.backdrop{
+    width: 100%;
+    filter: blur(10px);
+    opacity: 50%;
+}
+
+.banner .poster {
+    position: absolute;
+    width: 200px;
+    left: 10%;
+    top: 23%;
+    border-radius: 20px;
+}
+
+.title {
+    position: absolute;
+    left: 26%;
+    top: 23%;
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+.overview {
+    position: absolute;
+    left: 26%;
+    top: 32%;
+    font-weight: bold;
+    color: #f8f9fa;
+    margin-right: 20px;
+}

@@ -1,0 +1,31 @@
+.loginPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    /* flex-wrap: wrap; */
+}
+.loginTitle{
+    font-weight: 600;
+    /* color: #ff5858; */
+    color: #0974f1;
+    margin-bottom: 20px;
+}
+
+.loginForm{
+    padding: 20px;
+    width: 100%;
+    margin: 20px;
+    max-width: 700px;
+    border: 2px dashed #adb5bd;
+}
+
+.submitButton{
+    /* background-color: #ff5858; */
+    background-color: #0974f1;
+    color: #fff;
+}
+
+.errorText{
+    color: red;
+}

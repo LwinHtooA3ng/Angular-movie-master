@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+<!-- <div class="homePage" *ngFor="let p of popularMovieList;">
+    <p>{{p['original_title']}}</p>
+</div> -->
+<!-- <div class="homePage">
+<div class="myCard">
+    <div class="poster">
+        <img src="https://image.tmdb.org/t/p/original/kuf6dutpsT0vSVehic3EZIqkOBt.jpg" alt="">
+    </div>
+</div>
+</div> -->
+<div *ngIf="loggedIn" class="homePage">
+<div class="myCard" *ngFor="let p of popularMovieList;">
+    <a routerLink="/movie-details/{{p['id']}}"><div class="poster">
+        <img src="https://image.tmdb.org/t/p/original/{{p['poster_path']}}" alt="">
+    </div>
+    <div class="details">
+        <p>{{p['original_title']}}</p>
+        <!-- <p class="voting">Voting Rate 10/{{p['vote_average']}}</p> -->
+    </div>
+    <div class="rating">
+        <p>Rating - <span>{{p['vote_average']}}</span></p>
+    </div>
+    <div class="overview">
+        <p>{{p['overview'] | slice:0:60}}...</p>
+    </div></a>
+</div>
+</div>
+
+<div *ngIf="!loggedIn" class="homePage" style="color: #495057;">
+    <p>Please login to watch movie list.</p>
+</div>

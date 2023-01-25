@@ -1,0 +1,113 @@
+/* .homePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+} */
+.homePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    flex-wrap: wrap;
+}
+/* #ffc8c8, #ff5858 */
+.myCard{
+    position: relative;
+    width: 170px;
+    height:250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+}
+
+.myCard .poster{
+    position: relative;
+    overflow: hidden;
+}
+
+.myCard .poster img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.myCard:hover .poster img{
+    transform: translateY(-50px);
+    filter: blur(5px);
+}
+
+.myCard .poster::before{
+    content: "";
+    position: absolute;
+    /* bottom: -125px; */
+    bottom: -170px;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(0deg, #ff5858 50%,transparent); */
+    background: linear-gradient(0deg, #0974f1 50%,transparent);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.myCard:hover .poster::before {
+    bottom: 0px;
+}
+
+.myCard .details {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+    /* margin: 20px; */
+    padding: 10px 5px 0px 5px;
+    color: #f8f9fa;
+    transition: 0.5s;
+    font-weight: bold;
+    /* font-size: 17px; */
+}
+
+.myCard:hover .details{
+    bottom: 90px;
+}
+
+.myCard .rating{
+    position: absolute;
+    bottom : -50px;
+    z-index: 3;
+    color: #f8f9fa;
+    padding: 20px 5px 0px 5px;
+    transition: 0.5s;
+    font-size: 13px;
+}
+
+.myCard .rating span{
+    color: yellow;
+}
+
+.myCard:hover .rating{
+    bottom: 70px;
+}
+
+.myCard .overview{
+    position: absolute;
+    bottom: -160px;
+    z-index: 4;
+    color: #f8f9fa;
+    transition: 0.5s;
+    font-size: 13px;
+    padding: 0px 5px;
+}
+
+.myCard:hover .overview{
+    bottom: 0px;
+}
+
+
+
+
+
+/* .details .voting{
+    font-size: 13px;
+} */
+

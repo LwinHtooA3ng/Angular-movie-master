@@ -1,0 +1,28 @@
+<!-- <p>login works!</p> -->
+<app-nav-bar></app-nav-bar>
+<div class="loginPage">
+  <div class="loginForm">
+    <h2 class="loginTitle">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName="email">
+          <div *ngIf="(loginForm.get('email')?.invalid && loginForm.get('email')?.touched) || isSubmitted" id="emailHelp"
+            class="errorText">
+            <span  *ngIf="loginForm.get('email')?.errors?.required">Please enter your email.</span>
+            <span  *ngIf="loginForm.get('email')?.errors?.email">Please enter valid email.</span>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" formControlName="password">
+        <div *ngIf="(loginForm.get('password')?.invalid && loginForm.get('password')?.touched) || isSubmitted" id="passwordHelp"
+            class="errorText">
+            <span  *ngIf="loginForm.get('password')?.errors?.required">Please enter your password.</span>
+          </div>
+      </div>
+      <p class="errorText">{{loginStatus}}</p>
+      <button type="submit" class="btn submitButton">Submit</button>
+    </form>
+  </div>
+</div>

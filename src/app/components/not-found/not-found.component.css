@@ -1,0 +1,19 @@
+.notFoundPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    flex-flow: column;
+}
+.notFoundPng{
+    width: 500px;
+    order: 1;
+}
+
+p{
+    /* color: #0974f1; */
+    color: #495057;
+    font-weight: bold;
+    order: 2;
+    font-size: 18px;
+}
